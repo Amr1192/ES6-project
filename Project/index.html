@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+</head>
+<body>
+     <!-- Navbar -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top fw-bold fs-4">
+      <div class="container">
+        <a class="navbar-brand fs-3" href="#">A shop</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="mx-auto">
+            <ul class="navbar-nav d-flex justify-content-center gap-5">
+              <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" 
+                   data-bs-toggle="dropdown" aria-expanded="false">Contact</a>
+                <ul class="dropdown-menu bg-success" aria-labelledby="servicesDropdown">
+                  <li><a class="dropdown-item" target="_blank" href="https://www.facebook.com">Facebook</a></li>
+                  <li><a class="dropdown-item" target="_blank" href="https://www.instagram.com">Instagram</a></li>
+                  <li><a class="dropdown-item" target="_blank" href="https://wa.me//+201032129952">Whatsapp</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" 
+                   data-bs-toggle="dropdown" aria-expanded="false">Categories</a>
+                <ul class="dropdown-menu bg-success" aria-labelledby="categoriesDropdown">
+                  <li><a class="dropdown-item" href="#">Electronics</a></li>
+                  <li><a class="dropdown-item" href="#">Clothes</a></li>
+                  <li><a class="dropdown-item" href="#">Food</a></li>
+                  <li><a class="dropdown-item" href="#">Perfumes</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#">Products</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="ms-auto">
+          <a href="#" id="login-btn">Login</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  
+  <!-- Login & Register -->
+  <section class="main-section">
+    <div class="login bg-success" id="login">
+      <span class="login-close-btn">&times;</span>
+      <form id="loginForm">
+        <input type="text" id="login-email" placeholder="Enter your email" />
+        <p class="error-message" id="login-email-error">Incorrect email or password</p>
+        <input type="password" id="login-password" placeholder="Enter your password" />
+        <p class="error-message" id="login-password-error">Incorrect email or password</p>
+        <button type="submit">Login</button>
+        <p style="color: black;">Don't have an account? <span id="sign-up1">Sign up</span></p>
+      </form>
+    </div>
+
+    <div class="register bg-success" id="register">
+      <span class="register-close-btn">&times;</span>
+      <form id="registerForm">
+        <input type="text" id="username" placeholder="Enter your username" />
+        <p class="error-message" id="name-error">Invalid username (min 6 letters)</p>
+        <input type="email" id="email" placeholder="Enter your email" />
+        <p class="error-message" id="email-error">Please enter a valid email</p>
+        <input type="password" id="password" placeholder="Enter your password" />
+        <p class="error-message" id="password-error">Password must contain 8 characters including uppercase, numbers, and symbols</p>
+        <input type="password" id="confirm-password" placeholder="Confirm your password" />
+        <p class="error-message" id="confirm-password-error">Passwords do not match</p>
+        <button type="submit">Sign up</button>
+        <p style="color: black;">Already have an account? <span id="login1">Login</span></p>
+      </form>
+    </div>
+  </section>
+  
+  <!-- Slider -->
+  <section class="slider">
+    <div class="container-fluid container-md slider-container gap-5 pt-3 pb-5">
+      <div class="w-100 d-flex flex-column align-items-center gap-4">
+        <img src="images/food.jpg" alt="slider image" class="w-50 img-fluid" id="sliderImg" />
+        <div class="slider-buttons d-flex gap-3">
+          <button class="slider-btn" id="clickLeft"><img src="/images/arrow left.svg" alt=""></button>
+          <button id="toggleAutoPlay">Pause</button>
+          <button class="slider-btn" id="clickRight"><img src="/images/arrow_right.svg" alt=""></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="products">
+    <div>
+        <div><h3>Our Products</h3></div>
+        <div class="products-categories">
+            <button class="btn btn-success "id="all-products">ALL</button>
+            <button class="btn btn-outline-success rounded-Pill text-dark" id="electronics-category">Electronics</button>
+            <button class="btn btn-outline-success rounded-Pill text-dark" id="clothes-category">Clothes</button>
+            <button class="btn btn-outline-success rounded-Pill text-dark" id="food-category">Food</button>
+            <button class="btn btn-outline-success rounded-Pill text-dark" id="perfumes-category">Perfumes</button>
+        </div>
+        <div class="cards row px-5">
+            <div class="card col-lg-3 food-category" >
+                    <img src="/images/vegetables.jpeg" >
+                    <div class="card-body">
+                      <h5 class="card-title">Food</h5>
+                      <p class="card-text">Get all the food you want delivered to your doorsteps fresh and in no time</p>
+                      <p>10$</p>
+                      <a href="products.html?product=food&name=vegetables" class="btn btn-success">More details</a>
+                    </div>
+            </div>
+            
+       
+            <div class="card col-lg-3 clothes-category">
+                <img src="/images/shirts.jpeg" >
+                <div class="card-body">
+                  <h5 class="card-title">Clothes</h5>
+                  <p class="card-text">Buy some exotic clothes to you and your friends. All brands are here!</p>
+                  <p>20$</p>
+                  <a href="products.html?product=clothes&name=shirts&from=index.html" class="btn btn-success">More details</a>
+                </div>
+          </div>
+
+          <div class="card col-lg-3 electronics-category">
+                <img src="/images/laptop.jpeg">
+                <div class="card-body">
+                  <h5 class="card-title">Electronics</h5>
+                  <p class="card-text">Hype up your life with some of the best Electronics there in the market!</p>
+                  <p>30$</p>
+                  <a href="products.html?product=electronics&name=laptop&from=index.html" class="btn btn-success">More details</a>
+                </div>
+          </div>
+
+          <div class="card col-lg-3 perfumes-category">
+            <img src="/images/perfume1.jpeg" >
+            <div class="card-body">
+              <h5 class="card-title">Perfumes</h5>
+              <p class="card-text">The fragrance you nedd in your life. Stay cool and refreshed</p>
+              <p>40$</p>
+              <a href="products.html?perfumes=food&name=perfume1&from=index.html" class="btn btn-success">More details</a>
+            </div>
+       </div>
+
+       <div class="card col-lg-3 food-category" >
+            <img src="/images/fruits.jpg" class="">
+            <div class="card-body">
+              <h5 class="card-title">Food</h5>
+              <p class="card-text">Get all the food you want delivered to your doorsteps fresh and in no time</p>
+              <p>10$</p>
+              <a href="products.html?product=food&name=fruits&from=index.html" class="btn btn-success">More details</a>
+            </div>
+        </div>
+
+        <div class="card col-lg-3 clothes-category">
+                <img src="/images/clothess.jpeg">
+                <div class="card-body">
+                  <h5 class="card-title">Clothes</h5>
+                  <p class="card-text">Buy some exotic clothes to you and your friends. All brands are here!</p>
+                  <p>20$</p>
+                  <a href="products.html?product=clothes&name=clothes&from=index.html" class="btn btn-success">More details</a>
+                </div>
+        </div>
+
+        <div class="card col-lg-3 electronics-category">
+                <img src="/images/playstation.jpeg">
+                <div class="card-body">
+                  <h5 class="card-title">Electronics</h5>
+                  <p class="card-text">Hype up your life with some of the best Electronics there in the market!</p>
+                  <p>30$</p>
+                  <a href="products.html?product=electronics&name=playstation&from=index.html" class="btn btn-success">More details</a>
+                </div>
+              </div>
+       
+        
+        <div class="card col-lg-3 perfumes-category">
+            <img src="/images/perfume2.jpeg">
+            <div class="card-body">
+              <h5 class="card-title">Perfumes</h5>
+              <p class="card-text">The fragrance you nedd in your life. Stay cool and refreshed</p>
+              <p>40$</p>
+              <a href="products.html?product=perfumes&name=perfume2&from=index.html" class="btn btn-success">More details</a>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  
+  <!-- Footer -->
+  <footer class="bg-success text-white mt-5 py-4">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-sm-6">
+          <h5>Customer service</h5>
+          <a href="tel:+201032129952" target="_blank">Phone</a><br />
+          <a href="mailto:amr.ahmed11922911@gmail.com" target="_blank">Email</a><br />
+          <a href="https://wa.me//+201032129952" target="_blank" id="whatsapp">Whatsapp</a><br />
+        </div>
+        <div class="col-sm-6">
+          <h5>Our stores</h5>
+          <a href="https://www.google.com/maps?q=Cairo,Egypt" target="_blank">Cairo</a><br />
+          <a href="https://www.google.com/maps?q=Alex,Egypt" target="_blank">Alex</a><br />
+          <a href="https://www.google.com/maps?q=Menofia,Egypt" target="_blank">Menofia</a><br />
+        </div>
+        <div style="position: relative;">
+          <a href="#"><img src="images/arrowup.svg" alt="" id="arrowup" /></a>
+        </div>
+      </div>
+      <hr class="my-3" />
+      <h6>&copy; All rights reserved to A shop</h6>
+    </div>
+  </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+</body>
+</html>
